@@ -2,7 +2,7 @@ syntax = "proto3";
 
 import "google/protobuf/empty.proto";
 
-package com.example.hello;
+package hello;
 
 option java_package = "com.example.hello";
 option java_outer_classname = "HelloServiceProto";
