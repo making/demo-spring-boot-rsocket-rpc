@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+import "google/protobuf/empty.proto";
+
+package com.example.hello;
+
+option java_package = "com.example.hello";
+option java_outer_classname = "HelloServiceProto";
+option java_multiple_files = true;
+
+service HelloService {
+    rpc SayHello (HelloRequest) returns (HelloResponse) {
+    }
+    rpc LotsOfReplies (HelloRequest) returns (stream HelloResponse) {
+    }
+}
+
+message HelloRequest {
+    string greeting = 1;
+}
+
+message HelloResponse {
+    string reply = 1;
+}
